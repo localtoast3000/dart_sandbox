@@ -1,6 +1,5 @@
-import './lib/dart_sandbox.dart';
+import 'package:dart_sandbox/data_structures/data_structures.dart';
 
 void main() {
-  var dice = Dice(12);
-  dice.roll();
+  executeLinkedListExample();
 }
