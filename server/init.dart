@@ -5,7 +5,7 @@ const port = 8000;
 
 void main() async {
   final requests = await HttpServer.bind(host, port);
-  print('Dart server started for HOST:$host on PORT:$port');
+  print('Dart server started on $host:$port');
 
   await for (final request in requests) {
     processRequest(request);
