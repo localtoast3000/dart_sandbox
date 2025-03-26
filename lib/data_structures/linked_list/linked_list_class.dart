@@ -57,8 +57,9 @@ class LinkedList<T> {
   void traverse(bool? Function(LinkedListReadOnlyNode<T>) cb) {
     LinkedListNode? currentNode = _head;
     while (currentNode != null) {
-      final breaker =
-          cb(LinkedListReadOnlyNode(currentNode.idx, currentNode.data));
+      final breaker = cb(
+        LinkedListReadOnlyNode(currentNode.idx, currentNode.data),
+      );
       currentNode = currentNode.next;
 
       if (breaker == true) {

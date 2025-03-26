@@ -1,5 +1,9 @@
-import 'package:dart_sandbox/data_structures/data_structures.dart';
+import 'package:dart_sandbox/clients/restful_countries/restful_countries.dart';
 
-void main() {
-  executeLinkedListExample();
+void main() async {
+  final restfulCountriesClient = RestfulCountriesClient();
+
+  final countries = await restfulCountriesClient.getAllCountries();
+
+  print(countries);
 }
